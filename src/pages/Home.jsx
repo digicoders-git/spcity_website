@@ -7,7 +7,6 @@ import AboutPassion from "../components/AboutPassion";
 import AppointmentSection from "../components/AppointmentSection";
 import Footer from "../components/Footer";
 
-
 const Home = () => {
   return (
     <>
