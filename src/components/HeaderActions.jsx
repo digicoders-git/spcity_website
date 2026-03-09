@@ -31,11 +31,14 @@ const HeaderActions = () => {
       if (result.success) {
         const { token, user } = result.data;
         
-        // Dynamic Associate Panel URL (Checks common Vite ports)
-        const adminUrl = window.location.port === "5173" ? "http://localhost:5174" : "http://localhost:5173"; 
+        // Dynamic Associate Panel URL
+        const adminUrl = import.meta.env.VITE_ASSOCIATE_PANEL_URL || 
+                         (window.location.hostname === "localhost" 
+                           ? "http://localhost:5173" 
+                           : "https://spcity-adminpanel.vercel.app");
         
         // Redirect with auth info for auto-login
-        const redirectUrl = `${adminUrl}/?autoLogin=true&token=${token}&user=${encodeURIComponent(JSON.stringify(user))}`;
+        const redirectUrl = `${adminUrl}/login?autoLogin=true&token=${token}&user=${encodeURIComponent(JSON.stringify(user))}`;
         
         window.location.href = redirectUrl;
       } else {
