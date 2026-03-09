@@ -21,8 +21,8 @@ const ContactSection = () => {
   };
 
   const contactDetails = [
-    { icon: <FaPhone />, label: "PHONE", info: "+91 98765 43210", color: "bg-red-500" },
-    { icon: <FaEnvelope />, label: "EMAIL", info: "contact@spcity.com", color: "bg-blue-500" },
+    { icon: <FaPhone />, label: "PHONE", info: "+91 94513 13261", color: "bg-red-500" },
+    { icon: <FaEnvelope />, label: "EMAIL", info: "shivpuramcity@gmail.com", color: "bg-blue-500" },
     { icon: <FaMapMarkerAlt />, label: "ADDRESS", info: "123 SP City, Prayagraj, Uttar Pradesh", color: "bg-green-500" }
   ];
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ContactSection from "../components/ContactSection";
@@ -6,30 +6,6 @@ import FollowUs from "../components/FollowUs";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaPaperPlane } from "react-icons/fa";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
-  const [inView, setInView] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setInView(true); },
-      { threshold: 0.2 }
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
-
-  const contactInfo = [
-    { icon: <FaPhone />, title: "Phone", info: "+91 98765 43210", bgColor: "bg-red-500" },
-    { icon: <FaEnvelope />, title: "Email", info: "contact@spcity.com", bgColor: "bg-blue-500" },
-    { icon: <FaMapMarkerAlt />, title: "Address", info: "123 SP City, Prayagraj UP", bgColor: "bg-green-500" },
-    { icon: <FaClock />, title: "Working Hours", info: "Mon - Sat: 9AM - 6PM", bgColor: "bg-purple-500" }
-  ];
 
   return (
     <>
@@ -67,14 +43,14 @@ const Contact = () => {
                 <FaPhone />
               </div>
               <div className="text-sm text-gray-300 mb-1">Call Us</div>
-              <div className="font-bold text-white">+91 98765 43210</div>
+              <div className="font-bold text-white">+91 94513 13261</div>
             </div>
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
               <div className="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center text-white text-2xl mx-auto mb-4">
                 <FaEnvelope />
               </div>
               <div className="text-sm text-gray-300 mb-1">Email Us</div>
-              <div className="font-bold text-white">contact@spcity.com</div>
+              <div className="font-bold text-white">shivpuramcity@gmail.com</div>
             </div>
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
               <div className="w-14 h-14 bg-green-500 rounded-xl flex items-center justify-center text-white text-2xl mx-auto mb-4">

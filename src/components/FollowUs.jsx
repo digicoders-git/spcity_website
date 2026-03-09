@@ -12,10 +12,10 @@ const FollowUs = () => {
   const socials = [
     { icon: <FaInstagram />, link: "#" },
     { icon: <FaFacebookF />, link: "#" },
-    { icon: <FaTwitter />, link: "#" },
+    // { icon: <FaTwitter />, link: "#" },
     { icon: <FaYoutube />, link: "#" },
-    { icon: <FaTiktok />, link: "#" },
-    { icon: <FaLinkedinIn />, link: "#" },
+    // { icon: <FaTiktok />, link: "#" },
+    // { icon: <FaLinkedinIn />, link: "#" },
     { icon: <FaWhatsapp />, link: "#" },
   ];
 

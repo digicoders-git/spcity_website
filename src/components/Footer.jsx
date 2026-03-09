@@ -1,9 +1,9 @@
 import React from "react";
 import {
-  FaTwitter,
-  FaPinterestP,
   FaYoutube,
   FaInstagram,
+  FaFacebookF,
+  FaWhatsapp,
   FaArrowUp,
   FaSearch,
   FaPhone,
@@ -24,6 +24,13 @@ const Footer = () => {
     { name: t.ourProjects, path: "/project" },
     { name: t.ourGallery, path: "/gallery" },
     { name: t.contactUs, path: "/contact" },
+  ];
+
+  const socialIcons = [
+    { Icon: FaInstagram, link: "https://instagram.com" },
+    { Icon: FaFacebookF, link: "https://facebook.com" },
+    { Icon: FaYoutube, link: "https://youtube.com" },
+    { Icon: FaWhatsapp, link: "https://wa.me/919451313261" },
   ];
 
   return (
@@ -90,7 +97,7 @@ const Footer = () => {
               </div>
               <div>
                 <div className="text-gray-900 font-medium">{t.email}</div>
-                <div className="text-gray-600 text-sm">contact@spcity.com</div>
+                <div className="text-gray-600 text-sm">shivpuramcity@gmail.com</div>
               </div>
             </li>
             <li className="flex items-start gap-3 group">
@@ -99,7 +106,7 @@ const Footer = () => {
               </div>
               <div>
                 <div className="text-gray-900 font-medium">{t.phone}</div>
-                <div className="text-gray-600 text-sm">+91 98765 43210</div>
+                <div className="text-gray-600 text-sm"> +91 94513 13261</div>
               </div>
             </li>
           </ul>
@@ -127,16 +134,20 @@ const Footer = () => {
 
             {/* Social Icons */}
             <div className="flex gap-3 pt-4">
-              {[FaTwitter, FaPinterestP, FaYoutube, FaInstagram].map(
-                (Icon, index) => (
-                  <div
+              {socialIcons.map((item, index) => {
+                const SocialIcon = item.Icon;
+                return (
+                  <a
                     key={index}
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-100 hover:bg-red-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 cursor-pointer group"
                   >
-                    <Icon className="text-gray-600 group-hover:text-white" />
-                  </div>
-                )
-              )}
+                    <SocialIcon className="text-gray-600 group-hover:text-white text-lg" />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>

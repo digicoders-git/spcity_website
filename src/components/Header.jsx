@@ -1,4 +1,4 @@
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext.jsx";

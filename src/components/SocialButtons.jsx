@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram, FaFacebookF, FaTwitter,FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaYoutube,FaWhatsapp } from "react-icons/fa";
 
 const SocialButtons = () => {
   const socialLinks = [
@@ -18,16 +18,16 @@ const SocialButtons = () => {
       hoverColor: "hover:from-blue-600 hover:to-blue-700"
     },
     { 
-      name: "Twitter", 
-      icon: <FaTwitter />, 
-      url: "https://twitter.com", 
+      name: "Youtube", 
+      icon: <FaYoutube />, 
+      url: "https://youtube.com", 
       color: "from-sky-400 to-sky-500",
       hoverColor: "hover:from-sky-500 hover:to-sky-600"
     },
     { 
       name: "WhatsApp", 
       icon: <FaWhatsapp />, 
-      url: "https://wa.me/8112580707", 
+      url: "https://wa.me/919451313261", 
       color: "from-green-400 to-green-500",
       hoverColor: "hover:from-sky-500 hover:to-sky-600"
     }

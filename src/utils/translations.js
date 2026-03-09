@@ -87,6 +87,11 @@ export const translations = {
     previous: "Previous",
     loading: "Loading...",
     noResults: "No results found",
+    associateLogin: "Associate Login",
+    loginToPanel: "Login to Panel",
+    usernameOrEmail: "Username or Email",
+    password: "Password",
+    enterYourId: "Enter your id",
   },
   
   hi: {
@@ -177,6 +182,11 @@ export const translations = {
     previous: "पिछला",
     loading: "लोड हो रहा है...",
     noResults: "कोई परिणाम नहीं मिला",
+    associateLogin: "एसोसिएट लॉगिन",
+    loginToPanel: "पैनल में लॉगिन करें",
+    usernameOrEmail: "यूजरनेम या ईमेल",
+    password: "पासवर्ड",
+    enterYourId: "अपनी आईडी दर्ज करें",
   },
   
   es: {
@@ -267,5 +277,10 @@ export const translations = {
     previous: "Anterior",
     loading: "Cargando...",
     noResults: "No se encontraron resultados",
+    associateLogin: "Inicio de Sesión de Asociado",
+    loginToPanel: "Iniciar Sesión en el Panel",
+    usernameOrEmail: "Usuario o Correo",
+    password: "Contraseña",
+    enterYourId: "Ingrese su id",
   },
 };

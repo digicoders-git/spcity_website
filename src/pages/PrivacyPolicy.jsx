@@ -60,7 +60,7 @@ const PrivacyPolicy = () => {
             Your <span className="text-red-400">Privacy</span> Matters
           </h1>
           <p className="text-xl text-gray-200">
-            Last Updated: January 2024
+            Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
           </p>
         </div>
       </section>
