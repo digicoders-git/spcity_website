@@ -33,13 +33,14 @@ const HeaderActions = () => {
         
         // Dynamic Associate Panel URL
         const adminUrl = import.meta.env.VITE_ASSOCIATE_PANEL_URL || 
-                         (window.location.hostname === "localhost" 
+                         (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
                            ? "http://localhost:5173" 
                            : "https://spcity-adminpanel.vercel.app");
         
-        // Redirect with auth info for auto-login
-        const redirectUrl = `${adminUrl}/login?autoLogin=true&token=${token}&user=${encodeURIComponent(JSON.stringify(user))}`;
+        // Redirect with auth info for auto-login. Redirect to root since /login is handled by root in App.jsx
+        const redirectUrl = `${adminUrl}/?autoLogin=true&token=${token}&user=${encodeURIComponent(JSON.stringify(user))}`;
         
+        console.log("Redirecting to:", redirectUrl);
         window.location.href = redirectUrl;
       } else {
         setError(result.message || "Invalid credentials");
